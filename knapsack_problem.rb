@@ -1,4 +1,4 @@
-require 'pry'
+require_relative 'matrix'
 # Given 
 #   n items, each having a certain value and weight
 #   a theft with a knapsack with a certain weight capacity m
@@ -12,31 +12,6 @@ class Item
     @value = value
   end
 end
-
-class Matrix
-
-  # @param m [Integer] rows
-  # @param n [Integer] columns
-  def initialize(m, n, init_value=nil)
-    @data = []
-    m.times do
-      items = []
-      n.times do
-        items << init_value 
-      end
-      @data << items
-    end
-  end
-
-  def get(i,j)
-    @data[i][j]
-  end
-
-  def set(i,j,v)
-    @data[i][j] = v
-  end
-end
-
 
 M = 20
 items = [
